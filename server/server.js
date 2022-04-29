@@ -1,16 +1,15 @@
-import express from  "express";
+import express from "express";
 
 const app = express();
 
-
 app.get("/login", (req, res, next) => {
-    res.json({ username: "Ingen Ingesen" });
+  res.json({ username: "Ingen Ingesen" });
 });
 
 app.post("/login", (req, res, next) => {
-    res.sendStatus(401);
+  res.sendStatus(401);
 });
 
 const server = app.listen(process.env.PORT || 3000, () => {
-    console.log(`Startet on http://localhost:${server.address().port}`);
+  console.log(`Startet nodemon on http://localhost:${server.address().port}`);
 });
